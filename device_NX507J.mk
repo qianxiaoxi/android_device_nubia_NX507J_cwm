@@ -22,3 +22,16 @@ $(call inherit-product, build/target/product/full.mk)
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 PRODUCT_NAME := full_NX507J
 PRODUCT_DEVICE := NX507J
+
+PRODUCT_BUILD_PROP_OVERRIDES += \
+     PRODUCT_NAME=NX507J \
+     PRODUCT_DEFAULT_LANGUAGE=zh \
+     PRODUCT_DEFAULT_REGION=CN
+
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.sys.timezone=Asia/Shanghai
+
+# Ramdisk
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/fstab.qcom:root/fstab.qcom \
+     $(LOCAL_PATH)/ueventd.qcom.rc:root/ueventd.qcom.rc
