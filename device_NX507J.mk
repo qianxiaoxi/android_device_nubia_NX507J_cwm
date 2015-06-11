@@ -35,3 +35,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_COPY_FILES += \
      $(LOCAL_PATH)/fstab.qcom:root/fstab.qcom \
      $(LOCAL_PATH)/ueventd.qcom.rc:root/ueventd.qcom.rc
+
+# Recovery
+PRODUCT_COPY_FILES += \
+     $(LOCAL_PATH)/init.recovery.qcom.rc:root/init.recovery.qcom.rc \
+     $(LOCAL_PATH)/postrecoveryboot.sh:root/sbin/postrecoveryboot.sh
